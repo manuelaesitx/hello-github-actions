@@ -11,7 +11,7 @@ jobs:
         with:
           repository: manuelaesitx/issuechecker
           ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.productivity-app }}
           path: .github/actions
       - name: Check issue content step
         uses: ./.github/actions/issuechecker/code/roadmap-issue-checker
