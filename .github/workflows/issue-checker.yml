@@ -9,8 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: manuelaesitx/issuechecker.git
+          repository: manuelaesitx/issuechecker
           ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: .github/actions
       - name: Check issue content step
         uses: ./.github/actions/issuechecker/code/roadmap-issue-checker
