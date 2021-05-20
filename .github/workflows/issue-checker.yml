@@ -8,8 +8,12 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          repository: yourorg/privateactionrepo
+          ref: master
+          path: .github/actions
       - name: Check issue content step
-        uses: manuelaesitx/issuechecker/code/roadmap-issue-checker@main
+        uses: ./.github/actions/issuechecker/code/roadmap-issue-checker
         id: check_issue
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
