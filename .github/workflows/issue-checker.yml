@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: yourorg/privateactionrepo
+          repository: manuelaesitx/issuechecker
           ref: master
           path: .github/actions
       - name: Check issue content step
